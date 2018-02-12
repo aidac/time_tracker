@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>time tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form id="form">
+            <label for="activity">Enter activity</label>
+            <input type="text" id="activity" name="add">
+            <button type="button" id="add" name="add" onclick="addActivity()">Add activity</button>
+            <button type="button" id="stop" name="stop" onclick="stopActivity()">Stop timer</button>
+        </form>
+        <div class="list">
+            <table id="addAct" style="width:100%">
+                <tr>
+                    <th>#</th>
+                    <th>Activity</th>
+                    <th>Last length</th>
+                    <th>When</th>
+                </tr>
+            </table>
+        </div>
+        <form>
+            <button type="button" id="load" onclick="saveSession()">Save last session</button>
+            <button type="button" id="load" onclick="loadSession()">Load last session</button>
+        </form>
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>
