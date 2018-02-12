@@ -18,7 +18,7 @@ function addActivity() {
         let cell4 = row.insertCell(3);
         cell1.innerHTML = rows;
         cell2.innerHTML = activity.value;
-        cell3.innerHTML = "";
+        cell3.innerHTML = "0s";
         start();
         document.getElementById("form").reset();
     }

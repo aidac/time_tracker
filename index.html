@@ -6,35 +6,53 @@
     <meta charset="utf-8">
 
     <title>time tracker</title>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
-        <form id="form">
-            <label for="activity">Enter activity</label>
-            <input type="text" id="activity" name="add">
-            <button type="button" id="add" name="add" onclick="addActivity()">Add activity</button>
-            <button type="button" id="stop" name="stop" onclick="stopActivity()">Stop timer</button>
-        </form>
-        <div class="list">
-            <table id="addAct" style="width:100%">
-                <tr>
-                    <th>#</th>
-                    <th>Activity</th>
-                    <th>Last length</th>
-                    <th>When</th>
-                </tr>
-            </table>
-        </div>
-        <form>
-            <button type="button" id="load" onclick="saveSession()">Save last session</button>
-            <button type="button" id="load" onclick="loadSession()">Load last session</button>
-        </form>
-    </div>
+        <div class="window">
+            <div class="intro">
+                <p>This app is made to halp you track your daily activities.
+                    Enter the name of activity and click "add" to start counting the spent time.
+                </p>
+            </div>
+            <form id="form">
+                <!-- <div class="buttons">
+                    <button type="button" id="load" onclick="saveSession()">Save last session</button>
+                    <button type="button" id="load" onclick="loadSession()">Load last session</button>
+                </div> -->
+                <div class="input">
+                    <label for="activity">Enter activity</label>
+                    <input type="text" id="activity" name="add">
+                    <div>
+                        <button type="button" id="add" name="add" onclick="addActivity()" class="btn btn-success">Add activity</button>
+                        <button type="button" id="stop" name="stop" onclick="stopActivity()" class="btn btn-secondary">Stop timer</button>
+                    </div>
+                </div>
+            </form>
+            <div class="list">
+                <table id="addAct" style="width:100%" class="table">
+                    <tr>
+                        <th>#</th>
+                        <th>Activity</th>
+                        <th>Length</th>
+                        <th>When</th>
+                    </tr>
+                </table>
+            </div>
 
+        </div>
+    </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 <script src="script.js"></script>
 
 </html>

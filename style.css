@@ -3,9 +3,34 @@ body {
     justify-content: center;
     width: 100%;
     text-align: center;
+    background-color: rgb(236, 236, 236);
 }
 
 .container {
-    max-width: 600px;
-    min-width: 400px;
+    width: 600px;
+    height: 800px;
+}
+
+.window {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 2px black;
+}
+
+.list {
+    overflow: scroll;
+    padding: 0 10px 0 10px;
+}
+
+.buttons,
+.input {
+    margin: 10px 0;
+}
+
+.intro {
+    padding-top: 10px;
 }
